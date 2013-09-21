@@ -25,11 +25,11 @@ module.exports = function(grunt) {
       dev: {
         options: {
           file: 'init.js',
-          args: ['development'],
+          args: ['development', 'production'],
           nodeArgs: ['--debug'],
           ignoredFiles: ['README.md', 'node_modules/**'],
           watchedExtensions: ['js'],
-          watchedFolders: ['server'],
+          watchedFolders: ['server', 'frontend/scripts'],
           delayTime: 1,
           legacyWatch: true,
           env: {
@@ -106,7 +106,7 @@ module.exports = function(grunt) {
      grunt.file.mkdir('public/assets/fonts');
   });
 
-  grunt.loadNpmTasks('grunt-contrib-qunit');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-less');
