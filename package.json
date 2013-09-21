@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node init.js"
   },
   "dependencies": {
     "express": "3.3.8",
@@ -17,7 +17,9 @@
     "grunt-contrib-concat": "*",
     "grunt-contrib-less": "*",
     "grunt-concurrent":"*",
-    "grunt-stitch":"*"
+    "grunt-stitch":"*",
+    "grunt-nodemon": "*"
+
 
   }
 }

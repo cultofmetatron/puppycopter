@@ -21,6 +21,14 @@ module.exports = function(grunt) {
         }
       }
     },
+    concurrent: {
+        target: {
+            tasks: ['nodemon', 'watch'],
+            options: {
+                logConcurrentOutput: true
+            }
+        }
+    },
     jshint: {
       files: ['Gruntfile.js', 'server/**/*.js'],
       options: {
@@ -45,6 +53,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-nodemon');
   grunt.registerTask('test', ['jshint']);
 
   grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
