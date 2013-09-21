@@ -47,7 +47,7 @@ module.exports = function(grunt) {
     less: {
       development: {
         options: {
-          paths: ["assets/styles"]
+          //paths: ["assets/styles"]
         },
         files: {
           "public/styles/bootstrap.css": "frontend/components/bootstrap/less/bootstrap.less"
