@@ -9,6 +9,15 @@
     "express": "3.3.8",
     "ejs": "*",
     "stylus": "*",
-    "less": "*"
+    "less": "*",
+    "grunt-contrib-uglify":"*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-qunit":"*",
+    "grunt-contrib-watch":"*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-less": "*",
+    "grunt-concurrent":"*",
+    "grunt-stitch":"*"
+
   }
 }
