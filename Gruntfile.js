@@ -50,7 +50,8 @@ module.exports = function(grunt) {
           //paths: ["assets/styles"]
         },
         files: {
-          "public/assets/styles/bootstrap.css": "frontend/components/bootstrap/less/bootstrap.less"
+          "public/assets/styles/bootstrap.css": "frontend/components/bootstrap/less/bootstrap.less",
+          "public/assets/styles/app.css" : "frontend/styles/app.less"
         }
       },
       /*
