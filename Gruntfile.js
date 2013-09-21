@@ -44,6 +44,27 @@ module.exports = function(grunt) {
         }
       }
     },
+    less: {
+      development: {
+        options: {
+          paths: ["assets/styles"]
+        },
+        files: {
+          "public/styles/bootstrap.css": "frontend/components/bootstrap/less/bootstrap.less"
+        }
+      },
+      /*
+      production: {
+        options: {
+          paths: ["assets/css"],
+          yuicompress: true
+        },
+        files: {
+          "path/to/result.css": "path/to/source.less"
+        }
+      }
+      */
+    },
     stitch: {
       options: {
         paths: [
@@ -52,7 +73,7 @@ module.exports = function(grunt) {
         dependencies: [
           'frontend/components/bacon/dist/Bacon.js'
         ],
-        dest: 'public/scripts/app.js'
+        dest: 'public/assets/scripts/app.js'
       }
     },
     jshint: {
@@ -81,7 +102,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-stitch');
 
   grunt.registerTask('default', ['watch']);
-
+  grunt.registerTask('batch', ['less', 'stitch']);
   grunt.registerTask('server', ['concurrent']);
 
 };
