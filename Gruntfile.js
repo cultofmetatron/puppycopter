@@ -21,6 +21,29 @@ module.exports = function(grunt) {
             }
         }
     },
+    nodemon: {
+      dev: {
+        options: {
+          file: 'init.js',
+          args: ['development'],
+          nodeArgs: ['--debug'],
+          ignoredFiles: ['README.md', 'node_modules/**'],
+          watchedExtensions: ['js'],
+          watchedFolders: ['server', 'frontend/scripts'],
+          delayTime: 1,
+          legacyWatch: true,
+          env: {
+            PORT: '3000'
+          },
+          cwd: __dirname
+        }
+      },
+      exec: {
+        options: {
+          exec: 'less'
+        }
+      }
+    },
     stitch: {
       options: {
         paths: [
@@ -44,7 +67,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['server/**/*'],
+      files: ['server/**/*', 'fontend/**/*'],
       tasks: ['jshint', 'stitch']
     }
   });
@@ -58,5 +81,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-stitch');
 
   grunt.registerTask('default', ['watch']);
+
+  grunt.registerTask('server', ['concurrent']);
 
 };
