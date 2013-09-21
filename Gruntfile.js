@@ -82,6 +82,7 @@ module.exports = function(grunt) {
       options: {
         // options here to override JSHint defaults
         globals: {
+          Bacon: true,
           console: true,
           module: true,
           document: true

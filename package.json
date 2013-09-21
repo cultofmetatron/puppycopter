@@ -12,6 +12,7 @@
     "less": "*",
     "socket.io": "*",
     "grunt-contrib-uglify":"*",
+    "grunt-contrib-copy" : "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-qunit":"*",
     "grunt-contrib-watch":"*",
