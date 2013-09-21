@@ -29,6 +29,17 @@ module.exports = function(grunt) {
             }
         }
     },
+    stitch: {
+      options: {
+        paths: [
+          'frontend/scripts'
+        ],
+        dependencies: [
+          'frontend/components/bacon/dist/Bacon.js'
+        ],
+        dest: 'public/scripts/app.js'
+      }
+    },
     jshint: {
       files: ['Gruntfile.js', 'server/**/*.js'],
       options: {
@@ -41,8 +52,8 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['<%= jshint.files %>'],
-      tasks: ['jshint', 'qunit']
+      files: ['<%= ./**/* %>'],
+      tasks: ['jshint', 'stitch']
     }
   });
 
@@ -54,7 +65,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-nodemon');
-  grunt.registerTask('test', ['jshint']);
 
   grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
 
