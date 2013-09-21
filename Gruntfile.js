@@ -88,6 +88,9 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      options: {
+        livereload: true
+      },
       files: ['server/**/*', 'fontend/**/*'],
       tasks: ['jshint', 'stitch', 'less']
     }
@@ -99,7 +102,7 @@ module.exports = function(grunt) {
      grunt.file.mkdir('public/assets/styles');
      grunt.file.mkdir('public/assets/images');
      grunt.file.mkdir('public/assets/fonts');
- });
+  });
 
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-watch');
