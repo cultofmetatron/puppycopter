@@ -1,4 +1,7 @@
-public/*
+public/assets/fonts/*
+public/assets/styles/*
+public/assets/scripts/*
+public/assets/images/*
 frontend/components
 node_modules
 lib-cov
