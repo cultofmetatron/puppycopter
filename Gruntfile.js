@@ -29,7 +29,7 @@ module.exports = function(grunt) {
           nodeArgs: ['--debug'],
           ignoredFiles: ['README.md', 'node_modules/**'],
           watchedExtensions: ['js'],
-          watchedFolders: ['server', 'frontend/scripts'],
+          watchedFolders: ['server'],
           delayTime: 1,
           legacyWatch: true,
           env: {
@@ -88,12 +88,13 @@ module.exports = function(grunt) {
         }
       }
     },
+    clean: ["public"],
     watch: {
       options: {
         livereload: true
       },
       files: ['server/**/*', 'fontend/**/*'],
-      tasks: ['jshint', 'stitch', 'less']
+      tasks: ['jshint', 'batch']
     }
   });
 
@@ -112,6 +113,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-nodemon');
   grunt.loadNpmTasks('grunt-stitch');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('batch', ['public-dirs', 'less', 'stitch']);

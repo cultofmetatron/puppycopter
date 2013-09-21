@@ -16,6 +16,7 @@
     "grunt-contrib-watch":"*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-less": "*",
+    "grunt-contrib-clean": "*",
     "grunt-concurrent":"*",
     "grunt-stitch":"*",
     "grunt-nodemon": "*"
