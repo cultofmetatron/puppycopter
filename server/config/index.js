@@ -12,7 +12,7 @@ module.exports = function(app) {
   app.use(express.cookieParser('your secret here'));
   app.use(express.session());
   app.use(app.router);
-  app.use(express.static(path.join(app.rootDir, '../public')));
+  app.use(express.static(path.join(app.rootDir, 'public')));
 
   // development only
   if ('development' == app.get('env')) {
