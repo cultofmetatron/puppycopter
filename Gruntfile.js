@@ -89,9 +89,17 @@ module.exports = function(grunt) {
     },
     watch: {
       files: ['server/**/*', 'fontend/**/*'],
-      tasks: ['jshint', 'stitch']
+      tasks: ['jshint', 'stitch', 'less']
     }
   });
+
+  grunt.task.registerTask('public-dirs', 'makes the public directories' +
+    'for assetts generated into', function() {
+     grunt.file.mkdir('public/assets/scripts');
+     grunt.file.mkdir('public/assets/styles');
+     grunt.file.mkdir('public/assets/images');
+     grunt.file.mkdir('public/assets/fonts');
+ });
 
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -102,7 +110,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-stitch');
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('batch', ['less', 'stitch']);
+  grunt.registerTask('batch', ['public-dirs', 'less', 'stitch']);
   grunt.registerTask('server', ['concurrent']);
 
 };
