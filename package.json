@@ -11,6 +11,7 @@
     "stylus": "*",
     "less": "*",
     "q":"*",
+    "baconjs": "*",
     "socket.io": "*",
     "grunt-contrib-uglify":"*",
     "grunt-contrib-copy" : "*",

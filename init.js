@@ -5,10 +5,10 @@ var app = express();
 app.rootDir = __dirname;
 var http = require('http');
 
-server = require('./server/app.js')(app);
+app = require('./server/app.js')(app);
 
 
-server.listen(app.get('port'), function(){
+app.server.listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
