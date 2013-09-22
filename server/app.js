@@ -17,13 +17,16 @@ module.exports = function(app) {
   app.server = http.createServer(app);
 
   app.io = require('socket.io').listen(app.server);
-
+/*
   app.io.sockets.on('connection', function (socket) {
     socket.emit('news', { hello: 'world' });
-    socket.on('my other event', function (data) {
-      console.log(data);
+    socket.on('timedevent', function (data) {
+      console.log(data.time);
     });
+    console.log('bannanna phone!!');
   });
+*/
+  require('./bacon-socket')(app.io);
 
   return app;
 };

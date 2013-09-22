@@ -12,7 +12,11 @@
     "less": "*",
     "q":"*",
     "baconjs": "*",
-    "socket.io": "*",
+    "socket.io": "*"
+  },
+  "devDependencies": {
+    "load-grunt-tasks": "~0.1.0",
+    "grunt":"~0.4.1",
     "grunt-contrib-uglify":"*",
     "grunt-contrib-copy" : "*",
     "grunt-contrib-jshint": "*",
@@ -24,7 +28,5 @@
     "grunt-concurrent":"*",
     "grunt-stitch":"*",
     "grunt-nodemon": "*"
-
-
   }
 }

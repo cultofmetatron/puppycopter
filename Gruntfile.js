@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-
+  require('load-grunt-tasks')(grunt);
  
   var configs = {
     pkg: grunt.file.readJSON('package.json'),
@@ -109,16 +109,6 @@ module.exports = function(grunt) {
      grunt.file.mkdir('public/assets/images');
      grunt.file.mkdir('public/assets/fonts');
   });
-
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-concurrent');
-  grunt.loadNpmTasks('grunt-nodemon');
-  grunt.loadNpmTasks('grunt-stitch');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('batch', ['public-dirs', 'less', 'stitch']);
   grunt.registerTask('server', ['batch', 'concurrent']);
