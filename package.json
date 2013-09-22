@@ -10,6 +10,7 @@
     "ejs": "*",
     "stylus": "*",
     "less": "*",
+    "q":"*",
     "socket.io": "*",
     "grunt-contrib-uglify":"*",
     "grunt-contrib-copy" : "*",

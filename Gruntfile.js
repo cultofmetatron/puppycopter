@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
-  grunt.initConfig({
+ 
+  var configs = {
     pkg: grunt.file.readJSON('package.json'),
     /*
     concat: {
@@ -97,7 +98,9 @@ module.exports = function(grunt) {
       files: ['server/**/*', 'fontend/**/*'],
       tasks: ['jshint', 'batch']
     }
-  });
+  };
+
+  grunt.initConfig(configs);
 
   grunt.task.registerTask('public-dirs', 'makes the public directories' +
     'for assetts generated into', function() {
