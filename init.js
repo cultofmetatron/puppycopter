@@ -7,10 +7,6 @@ app = require('./server/app.js')(app);
 var http = require('http');
 var server = http.createServer(app);
 
-server.listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
-});
-
 server.io = require('socket.io').listen(server);
 
 server.io.sockets.on('connection', function (socket) {
@@ -19,4 +15,9 @@ server.io.sockets.on('connection', function (socket) {
     console.log(data);
   });
 });
+
+server.listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
+});
+
 
