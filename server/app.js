@@ -17,7 +17,7 @@ module.exports = function(app) {
   app.server = http.createServer(app);
 
   app.io = require('socket.io').listen(app.server);
-/*
+
   app.io.sockets.on('connection', function (socket) {
     socket.emit('news', { hello: 'world' });
     socket.on('timedevent', function (data) {
@@ -25,8 +25,6 @@ module.exports = function(app) {
     });
     console.log('bannanna phone!!');
   });
-*/
-  require('./bacon-socket')(app.io);
 
   return app;
 };

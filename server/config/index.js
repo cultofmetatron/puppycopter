@@ -1,8 +1,6 @@
 var path = require('path');
 var express = require('express');
 module.exports = function(app) {
-
-
   // all environments
   app.set('port', process.env.PORT || 3000);
   app.set('views', path.join(app.rootDir, 'server','views'));
