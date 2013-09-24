@@ -73,7 +73,8 @@ module.exports = function(grunt) {
           'frontend/scripts'
         ],
         dependencies: [
-          'frontend/components/bacon/dist/Bacon.js'
+          'frontend/components/bacon/dist/Bacon.js',
+          'frontend/components/jquery/jquery.js',
         ],
         dest: 'public/assets/scripts/app.js'
       }

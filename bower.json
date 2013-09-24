@@ -6,6 +6,8 @@
       "**/.*"
   ],
   "dependencies": {
-    "bacon": "*"
+    "bacon": "*",
+    "angular-latest": "*"
+
   }
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -10,19 +10,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> 
   <title><%= title %></title>
+  
   <link rel='stylesheet' href='/assets/styles/bootstrap.css' />
   </head>
   <body>
-    <h1><%= title %> web development</h1>
+  <% include partials/header.ejs %>
+  <div class="container">
+    <h1><%= title %> Web Development</h1>
     <p>Welcome to <%= title %></p>
     <p> this is the best boilerplate!</p>
-    <script src="/assets/scripts/app.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io.connect('http://localhost:3000');
-      var app = require('app')
-      app(socket);
-    
-    </script>
+
+  </div>
+
+
+  <script src="/assets/scripts/app.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io.connect('http://localhost:3000');
+    var app = require('app')
+    app(socket);
+
+
+  </script>
+
   </body>
 </html>
