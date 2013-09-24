@@ -7,4 +7,11 @@ module.exports  = function(socket) {
       socket.emit('timedevent', { time: (new Date()).toString() });
     }, 1000);
   });
+
+  var cliks = $('h1').asEventStream('click');
+
+  cliks.onValue(function() {
+    console.log('hello');
+  });
+
 };
