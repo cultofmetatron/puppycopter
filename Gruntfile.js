@@ -73,8 +73,20 @@ module.exports = function(grunt) {
           'frontend/scripts'
         ],
         dependencies: [
-          'frontend/components/bacon/dist/Bacon.js',
           'frontend/components/jquery/jquery.js',
+          'frontend/components/bacon/dist/Bacon.js',
+          'frontend/components/bootstrap/js/transition.js',
+          'frontend/components/bootstrap/js/tooltip.js',
+          'frontend/components/bootstrap/js/affix.js',
+          'frontend/components/bootstrap/js/alert.js',
+          'frontend/components/bootstrap/js/button.js',
+          'frontend/components/bootstrap/js/carousel.js',
+          'frontend/components/bootstrap/js/popover.js',
+          'frontend/components/bootstrap/js/collapse.js',
+          'frontend/components/bootstrap/js/tab.js',
+          'frontend/components/bootstrap/js/dropdown.js',
+          'frontend/components/bootstrap/js/scrollspy.js',
+          'frontend/components/bootstrap/js/modal.js'
         ],
         dest: 'public/assets/scripts/app.js'
       }
